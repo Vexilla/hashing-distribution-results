@@ -105,8 +105,7 @@ function createCSV(filename: string, results: HashDistributionResult[]) {
     .map((result) => Object.values(result).join(","))
     .join("\n");
 
-  const output = `
-${keys}
+  const output = `${keys}
 ${resultLines}
 `;
 
