@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node --project=./tsconfig.json ./src/index.ts",
+    "benchmark": "ts-node --project=./tsconfig.json ./src/index.ts",
+    "start": "pnpm run benchmark && rm -rf ./apps/graphing-sandbox/src/assets/results && mv results ./apps/graphing-sandbox/src/assets/results",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -16,6 +17,9 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "nanoid": "^5.0.1"
+    "@nivo/boxplot": "^0.87.0",
+    "nanoid": "^5.0.1",
+    "plotly.js": "^2.32.0",
+    "react-plotly.js": "^2.6.0"
   }
 }

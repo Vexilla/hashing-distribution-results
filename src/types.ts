@@ -9,3 +9,9 @@ export interface HashDistributionResult {
 
   time: number;
 }
+
+export interface RawHashDistributionResult {
+  algorithm: string;
+  value: number;
+  time: number;
+}
